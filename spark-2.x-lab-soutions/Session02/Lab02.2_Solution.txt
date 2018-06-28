@@ -1,0 +1,41 @@
+*** Section: Load a file and process its contents ***
+
+Answer the following questions:
+
+What is the type of f?
+> f
+res0: org.apache.spark.rdd.RDD[String] = spark-labs/data/twinkle/sample.txt MapPartitionsRDD[1] at textFile at <console>:24
+
+Inspect the Spark Shell UI on port 4040, do you see any processing (i.e. jobs) done? Why (not)?
+* Because there are no results needed, Spark delays execution of the actual reading of the file.
+
+Print the first line / record from the RDD
+hint : f.first()
+Refresh the Spark Shell UI on port 4040 and inspect it. Do you see any processing (jobs) done? Why (not)?
+* Yes - because now the Spark engine had to generate results, so it had to do the work.
+
+After f.take(3):
+Refresh the Spark Shell UI on port 4040 and inspect it. Do you see any processing (jobs) done? Why (not)?
+* Yes, we should see a second job was done.
+
+After f.collect():
+How many lines are in the file?
+* Five lines.
+
+After f.count()
+Refresh the Spark Shell UI on port 4040 and inspect the 'Jobs' section in it
+* We should a job for each operation that produced a result (four, if you followed the lab instructions exactly).
+
+
+*** Section: Connecting the Shell and Spark server ***
+
+After starting the shell via: 
+   ~/spark/bin/spark-shell
+Once the shell starts, check the server UI on port 8080.
+Do you see the shell connected as an application? Why (not) ?
+* No - because you're running the shell with the default "local" server, not connecting to a server.
+
+After starting the shell via: 
+   ~/spark/bin/spark-shell   --master  spark-server-uri
+Once the shell has started, refresh and check both UIs
+* You will see a connected application - the Spark shell !

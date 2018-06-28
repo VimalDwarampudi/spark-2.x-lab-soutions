@@ -1,0 +1,36 @@
+***
+*** Load Text and JSON Data ***
+*** 
+
+Read people.json
+> val folksDF=spark.read.json("spark-labs/data/people.json")
+
+Read wiki-pageviews.txt
+> var viewsDF = spark.read.text("data/wiki-pageviews.txt")
+
+Display some of the data
+> folksDF.limit(5).show
+> viewsDF.limit(5).show
+
+***
+*** Read More Complex Data ***
+*** 
+Read/display data in github.json
+
+> val githubDF=spark.read.json("data/github.json")
+> githubDF.limit(5).show
+
+***
+*** Write Data ***
+*** 
+
+Write out folksDF as parquet file
+> folksDF.write.parquet("output/people.parquet")
+
+Write out folksDF as a CSV file
+> folksDF.coalesce(1).write.option("header", true).csv("data/people.csv")
+
+(Optional) Write out githubDF as a parquet file
+> githubDF.write.parquet("output/github.parquet")
+
+

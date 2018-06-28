@@ -1,0 +1,19 @@
+import org.apache.spark.sql.streaming.ProcessingTime
+
+val lines = spark.readStream
+  .format("socket")
+  .option("host", "localhost")
+  .option("port", 9999)
+  
+val linesDF = lines.load()
+  
+val splitWordsDF = linesDF.select(explode (split('value, "\\s+")).as("word")  ).select(lower('word).as("word"))
+
+val wordCountsDF = splitWordsDF.groupBy('word).count()
+
+val writer = wordCountsDF.writeStream
+  .trigger(ProcessingTime("5 seconds"))
+  .outputMode("complete")
+  .format("console")
+  
+val query = writer.start()

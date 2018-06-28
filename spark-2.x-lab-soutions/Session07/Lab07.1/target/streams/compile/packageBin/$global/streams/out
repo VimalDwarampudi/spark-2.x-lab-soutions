@@ -1,0 +1,13 @@
+[0m[[0minfo[0m] [0mPackaging /Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/target/scala-2.11/myapp_2.11-1.0.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	com/mycompany/ProcessFiles$$anonfun$main$1.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/target/scala-2.11/classes/com/mycompany/ProcessFiles$$anonfun$main$1.class[0m
+[0m[[0mdebug[0m] [0m	com/mycompany[0m
+[0m[[0mdebug[0m] [0m	  /Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/target/scala-2.11/classes/com/mycompany[0m
+[0m[[0mdebug[0m] [0m	com/mycompany/ProcessFiles.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/target/scala-2.11/classes/com/mycompany/ProcessFiles.class[0m
+[0m[[0mdebug[0m] [0m	com/mycompany/ProcessFiles$.class[0m
+[0m[[0mdebug[0m] [0m	  /Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/target/scala-2.11/classes/com/mycompany/ProcessFiles$.class[0m
+[0m[[0mdebug[0m] [0m	com[0m
+[0m[[0mdebug[0m] [0m	  /Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/target/scala-2.11/classes/com[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m

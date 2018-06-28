@@ -1,0 +1,77 @@
+// START copying here at beginning of lab (raw voter data streaming)
+
+// Create streaming DataFrame reading from Kafka
+val kafkaVoterDF = spark 
+  .readStream 
+  .format("kafka") 
+  .option("kafka.bootstrap.servers", "localhost:9092") 
+  .option("subscribe", "voters") 
+  .option("startingOffsets", "earliest")
+  .load()
+
+// Query for and display raw data.
+import org.apache.spark.sql.streaming.ProcessingTime
+val rawVoterQuery = kafkaVoterDF.writeStream
+.trigger(ProcessingTime("10 seconds"))
+.outputMode("append")
+.format("console")
+.start()
+
+
+// END copying here for raw voter data streaming.
+
+// Optional DONE: Pull out the payload data as a string, then view it.
+
+val voterStringDF = kafkaVoterDF.select('value.cast("string")).as("voterString")
+
+val stringVoterQuery = voterStringDF.writeStream
+.trigger(ProcessingTime("10 seconds"))
+.outputMode("append")  // append is required when no aggregation (1)
+.format("console")
+.option("truncate", "false")
+.start()
+
+// END Optional payload data as a string.
+
+
+// START: Processing JSON data.
+
+import org.apache.spark.sql.types._
+val voterSchema = (new StructType).add("gender",StringType).add("age",LongType).add("party",StringType)
+
+val voterStatsDF = kafkaVoterDF
+  .select(from_json('value.cast("string"), voterSchema).as("voterJSON"))
+  .groupBy("voterJSON.gender", "voterJSON.party").count
+
+// Statistical data.
+import org.apache.spark.sql.streaming.ProcessingTime
+val voterStatsQuery = voterStatsDF.writeStream
+.trigger(ProcessingTime("1 minute"))
+.outputMode("complete")
+.format("console")
+.start()
+
+// END Processing JSON data.
+
+
+// START Process data into age buckets.
+
+// Create the bucket column
+val binnedVoterDF = kafkaVoterDF
+   .select(from_json('value.cast("string"), voterSchema).as("voterJSON"))
+  .withColumn("bucket", (($"voterJSON.age"-18) / 10).cast("int"))
+  
+// Analyze by buckets
+binnedVoterDF.createOrReplaceTempView("binnedVoters")  
+val rangedVoterDF = spark.sql("SELECT bucket, bucket*10+18 AS startAge, (bucket+1)*10+18-1 AS endAge, voterJSON.party, count(*) FROM binnedVoters GROUP BY bucket, voterJSON.party ORDER BY bucket ASC").toDF
+
+// Start the query.
+import org.apache.spark.sql.streaming.ProcessingTime
+val voterRangeQuery = rangedVoterDF.writeStream
+.trigger(ProcessingTime("1 minute"))
+.outputMode("complete")
+.format("console")
+.start()
+
+
+// END Process data into age buckets.

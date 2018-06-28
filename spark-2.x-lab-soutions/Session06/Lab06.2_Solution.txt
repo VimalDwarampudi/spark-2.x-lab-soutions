@@ -1,0 +1,140 @@
+***
+*** Lab Preparation: Load Github Data ***
+*** 
+
+> val githubDF=spark.read.json("spark-labs/data/github.json")
+
+***
+*** Top 20 Contributors - Straightforward Query ***
+*** 
+
+> val scanQuery = githubDF.groupBy("actor.login").count.orderBy('count.desc).limit(20)
+> scanQuery.show
++------------------+-----+
+|             login|count|
++------------------+-----+
+|GoogleCodeExporter| 2073|
+|         stackmutt|  284|
+|      greatfirebot|  192|
+|diversify-exp-user|  146|
+|            kwurst|   92|
+|   direwolf-github|   88|
+|     KenanSulayman|   72|
+|        jack-oquin|   52|
+|        manuelrp07|   45|
+|    mirror-updates|   42|
+|     tryton-mirror|   37|
+|        EstifanosG|   32|
+|           houndci|   30|
+|      jeff1evesque|   29|
+|      LukasReschke|   28|
+|           Somasis|   27|
+|       nwt-patrick|   27|
+|        mikegazdag|   26|
+|       tterrag1098|   23|
+|   EmanueleMinotto|   22|
+
+
+***
+*** Top 20 Contributors - Join Query ***
+*** 
+
+> val githubTop20DF = spark.read.json("spark-labs/data/github-top20.json")
+> val topContributorsJoinedDF = githubDF.join(githubTop20DF, githubDF("actor.login") === githubTop20DF("login")).groupBy("actor.login").count.orderBy('count.desc)
+
+// The below shuffles 7.9K when broadcast.
+> topContributorsJoinedDF.show
++------------------+-----+
+|             login|count|
++------------------+-----+
+|GoogleCodeExporter| 2073|
+|         stackmutt|  284|
+|      greatfirebot|  192|
+|diversify-exp-user|  146|
+|            kwurst|   92|
+|   direwolf-github|   88|
+|     KenanSulayman|   72|
+|        jack-oquin|   52|
+|        manuelrp07|   45|
+|    mirror-updates|   42|
+|     tryton-mirror|   37|
+|        EstifanosG|   32|
+|           houndci|   30|
+|      jeff1evesque|   29|
+|      LukasReschke|   28|
+|       nwt-patrick|   27|
+|           Somasis|   27|
+|        mikegazdag|   26|
+|       tterrag1098|   23|
+|   EmanueleMinotto|   22|
++------------------+-----+
+
+// Explain with broadcast enabled.
+> topContributorsJoinedDF.explain
+== Physical Plan ==
+*Sort [count#581L DESC NULLS LAST], true, 0
++- Exchange rangepartitioning(count#581L DESC NULLS LAST, 200)
+   +- *HashAggregate(keys=[actor#80.login#587], functions=[count(1)])
+      +- Exchange hashpartitioning(actor#80.login#587, 200)
+         +- *HashAggregate(keys=[actor#80.login AS actor#80.login#587], functions=[partial_count(1)])
+            +- *Project [actor#80]
+               +- *BroadcastHashJoin [actor#80.login], [login#98], Inner, BuildRight
+                  :- *FileScan json [actor#80] Batched: false, Format: JSON, Location: InMemoryFileIndex[file:/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-la..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<actor:struct<avatar_url:string,gravatar_id:string,id:bigint,login:string,url:string>>
+                  +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, true]))
+                     +- *Project [login#98]
+                        +- *Filter isnotnull(login#98)
+                           +- *FileScan json [login#98] Batched: false, Format: JSON, Location: InMemoryFileIndex[file:/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-la..., PartitionFilters: [], PushedFilters: [IsNotNull(login)], ReadSchema: struct<login:string>
+
+***
+*** Join Performance without Broadcast ***
+*** 
+> spark.conf.set("spark.sql.autoBroadcastJoinThreshold",-1)
+// Explain with no broadcast.  
+> topContributorsJoinedDF.explain
+== Physical Plan ==
+*Sort [count#634L DESC NULLS LAST], true, 0
++- Exchange rangepartitioning(count#634L DESC NULLS LAST, 200)
+   +- *HashAggregate(keys=[actor#80.login#640], functions=[count(1)])
+      +- Exchange hashpartitioning(actor#80.login#640, 200)
+         +- *HashAggregate(keys=[actor#80.login AS actor#80.login#640], functions=[partial_count(1)])
+            +- *Project [actor#80]
+               +- *SortMergeJoin [actor#80.login], [login#98], Inner
+                  :- *Sort [actor#80.login ASC NULLS FIRST], false, 0
+                  :  +- Exchange hashpartitioning(actor#80.login, 200)
+                  :     +- *FileScan json [actor#80] Batched: false, Format: JSON, Location: InMemoryFileIndex[file:/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-la..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<actor:struct<avatar_url:string,gravatar_id:string,id:bigint,login:string,url:string>>
+                  +- *Sort [login#98 ASC NULLS FIRST], false, 0
+                     +- Exchange hashpartitioning(login#98, 200)
+                        +- *Project [login#98]
+                           +- *Filter isnotnull(login#98)
+                              +- *FileScan json [login#98] Batched: false, Format: JSON, Location: InMemoryFileIndex[file:/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-la..., PartitionFilters: [], PushedFilters: [IsNotNull(login)], ReadSchema: struct<login:string>
+
+
+***
+*** [Optional] Do the Same Join Query using SQL ***
+*** 
+// Reenable auto broadcast.
+> spark.conf.set("spark.sql.autoBroadcastJoinThreshold",1024*1024*10)
+
+// Create the tables.
+> githubDF.createOrReplaceTempView("githubData")
+> githubTop20DF.createOrReplaceTempView("top20")
+
+// Straight scan query
+> spark.sql("SELECT actor.login, COUNT(*) AS entryCount FROM githubData GROUP BY actor.login ORDER BY entryCount DESC LIMIT 20").show
+
+// Query using subquery and existing top 20 data.  You can see that Catalyst optimizes this to do a broadcast.
+
+> val subQueryCount = spark.sql("SELECT actor.login, COUNT(*) AS entryCount FROM githubData WHERE actor.login IN (SELECT login FROM top20) GROUP BY actor.login ORDER BY entryCount DESC")
+> subQueryCount.explain
+== Physical Plan ==
+*Sort [entryCount#1066L DESC NULLS LAST], true, 0
++- Exchange rangepartitioning(entryCount#1066L DESC NULLS LAST, 200)
+   +- *HashAggregate(keys=[actor#394.login#1080], functions=[count(1)])
+      +- Exchange hashpartitioning(actor#394.login#1080, 200)
+         +- *HashAggregate(keys=[actor#394.login AS actor#394.login#1080], functions=[partial_count(1)])
+            +- Project [actor#394]
+               +- BroadcastHashJoin [actor#394.login], [login#969], LeftSemi, BuildRight
+                  :- FileScan json [actor#394,created_at#395,id#396,org#397,payload#398,public#399,repo#400,type#401] Batched: false, Format: JSON, Location: InMemoryFileIndex[file:/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-la..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<actor:struct<avatar_url:string,gravatar_id:string,id:bigint,login:string,url:string>,creat...
+                  +- BroadcastExchange HashedRelationBroadcastMode(List(input[0, string, true]))
+                     +- *FileScan json [login#969] Batched: false, Format: JSON, Location: InMemoryFileIndex[file:/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-la..., PartitionFilters: [], PushedFilters: [], ReadSchema: struct<login:string>
+

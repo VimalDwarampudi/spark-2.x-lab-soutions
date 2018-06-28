@@ -1,0 +1,126 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/target/scala-2.11/classes
+compile options:
+0 items
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.11.7
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+3 items
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> /Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/target/scala-2.11/classes/com/mycompany/ProcessFiles$$anonfun$main$1.class
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> /Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/target/scala-2.11/classes/com/mycompany/ProcessFiles$.class
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> /Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/target/scala-2.11/classes/com/mycompany/ProcessFiles.class
+binary dependencies:
+4 items
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/rt.jar
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> /Users/yaakov/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.1.0.jar
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> /Users/yaakov/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.1.0.jar
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> /Users/yaakov/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+3 items
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> com.mycompany.ProcessFiles
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> com.mycompany.ProcessFiles$
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> com.mycompany.ProcessFiles$$anonfun$main$1
+used names:
+39 items
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> <
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> <init>
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> AnyRef
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> Array
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> Console
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> Predef
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> ProcessFiles
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> SparkContext
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> SparkSession
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> String
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> System
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> Unit
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> apache
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> appName
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> args
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> augmentString
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> builder
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> com
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> count
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> exit
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> file
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> fileDF
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> foreach
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> format
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> functions
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> getOrCreate
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> java
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> lang
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> length
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> mycompany
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> org
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> println
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> read
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> readLine
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> refArrayOps
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> scala
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> spark
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> sql
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> text
+product stamps:
+3 items
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/target/scala-2.11/classes/com/mycompany/ProcessFiles$$anonfun$main$1.class -> lastModified(1497681063000)
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/target/scala-2.11/classes/com/mycompany/ProcessFiles$.class -> lastModified(1497681063000)
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/target/scala-2.11/classes/com/mycompany/ProcessFiles.class -> lastModified(1497681062000)
+source stamps:
+1 items
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> hash(cdd0ad8e3e00b9e111837c89df3dee9cb065e1f5)
+binary stamps:
+4 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/rt.jar -> lastModified(1428689516000)
+/Users/yaakov/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.1.0.jar -> lastModified(1481871925000)
+/Users/yaakov/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.1.0.jar -> lastModified(1481872304000)
+/Users/yaakov/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar -> lastModified(1435004218000)
+class names:
+4 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/jre/lib/rt.jar -> java.lang.Object
+/Users/yaakov/.ivy2/cache/org.apache.spark/spark-core_2.11/jars/spark-core_2.11-2.1.0.jar -> org.apache.spark.SparkContext$
+/Users/yaakov/.ivy2/cache/org.apache.spark/spark-sql_2.11/jars/spark-sql_2.11-2.1.0.jar -> org.apache.spark.sql.DataFrameReader
+/Users/yaakov/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar -> scala.collection.immutable.StringLike
+internal apis:
+1 items
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHB8fBgaAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAFXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cI8yVU90AAZub3RpZnlzcQB+AAzgOTTSdAAEd2FpdHNxAH4ADOlVjSp0AA0kYXNJbnN0YW5jZU9mc3EAfgAMQvyainQABmVxdWFsc3NxAH4ADDX6YLF0AAxQcm9jZXNzRmlsZXNzcQB+AAxgtdQBdAAMYXNJbnN0YW5jZU9mc3EAfgAMe1Yw4HQADHN5bmNocm9uaXplZHNxAH4ADFCPBfF0AA0kaXNJbnN0YW5jZU9mc3EAfgAMn3hqj3QABG1haW5zcQB+AAzKzr1ddAAJbm90aWZ5QWxsc3EAfgAMvwNntHQADGlzSW5zdGFuY2VPZnNxAH4ADGo0J7V0AAI9PXNxAH4ADOKIZn10AAVjbG9uZXNxAH4ADEFbXrB0AAh0b1N0cmluZ3NxAH4ADKRqhux0AAIhPXNxAH4ADEah6J50AAhnZXRDbGFzc3NxAH4ADMpJUs50AAJuZXNxAH4ADDUq7g10AAJlcXNxAH4ADLRxpNZ0AAIjI3NxAH4ADG8CB3t0AAhmaW5hbGl6ZXNxAH4ADN1Pg/V0AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AEF4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc8cREyFpnNwkAgABQgAFZmxhZ3N4cAB0ABpjb20ubXljb21wYW55LlByb2Nlc3NGaWxlc3VyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgATeHNidGkuU2FmZUxhenkkSW1wbFACLpOXl0A/AgADWgAIYml0bWFwJDBMAAJfdHQAEkxqYXZhL2xhbmcvT2JqZWN0O0wABGV2YWx0ABFMc2NhbGEvRnVuY3Rpb24wO3hyABZ4c2J0aS5hcGkuQWJzdHJhY3RMYXp503e1AV+756ACAAB4cABwc3IAIHhzYnRpLlNhZmVMYXp5JCRhbm9uZnVuJHN0cmljdCQxAAAAAAAAAAACAAFMAAd2YWx1ZSQxcQB+AFp4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+AFkAcHNxAH4AXnNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBBTAAJaW5oZXJpdGVkcQB+AEFMAAdwYXJlbnRzcQB+AEF4cQB+AGJzcQB+AFkAcHNxAH4AXnVxAH4APAAAAAFzcgANeHNidGkuYXBpLkRlZlK+n+J8tDZpAgACTAAKcmV0dXJuVHlwZXQAEEx4c2J0aS9hcGkvVHlwZTtbAA92YWx1ZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9QYXJhbWV0ZXJMaXN0O3hxAH4AQnEAfgBLdXEAfgBMAAAAAHNxAH4ATgBxAH4AH3VxAH4AUQAAAABzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBhdAAEVW5pdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AYXNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4Af3VyABpbTHhzYnRpLmFwaS5QYXJhbWV0ZXJMaXN0O/XTOh3ys3DuAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJMaXN01sW8HGRJdOMCAAJaAAppc0ltcGxpY2l0WwAKcGFyYW1ldGVyc3QAHFtMeHNidGkvYXBpL01ldGhvZFBhcmFtZXRlcjt4cAB1cgAcW0x4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyO8+4xV2l3bVtAgAAeHAAAAABc3IAGXhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXIfRa4X00mw6gIABFoACmhhc0RlZmF1bHRMAAhtb2RpZmllcnQAHUx4c2J0aS9hcGkvUGFyYW1ldGVyTW9kaWZpZXI7TAAEbmFtZXEAfgANTAADdHBlcQB+AGx4cAB+cgAbeHNidGkuYXBpLlBhcmFtZXRlck1vZGlmaWVyAAAAAAAAAAASAAB4cQB+AFR0AAVQbGFpbnQABGFyZ3NzcgAXeHNidGkuYXBpLlBhcmFtZXRlcml6ZWQWbO5pA8m7fwIAAkwACGJhc2VUeXBlcQB+AHNbAA10eXBlQXJndW1lbnRzdAARW0x4c2J0aS9hcGkvVHlwZTt4cQB+AGFzcQB+AHJ0AAVBcnJheXEAfgB4dXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAFzcQB+AHJ0AAZTdHJpbmdzcQB+AHZzcQB+AHl1cQB+AHwAAAADc3EAfgB+dAAEamF2YXNxAH4AfnQABGxhbmdxAH4Ag3NxAH4AWQBwc3EAfgBedXEAfgA8AAAAAHNxAH4AWQBwc3EAfgBedXEAfgCXAAAAAnNxAH4AcnQABk9iamVjdHEAfgCbc3EAfgBydAADQW55cQB+AHh1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAnNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgANeHB0AA1jb20ubXljb21wYW55c3EAfgCudAADY29tc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFctL9a/nVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0AIIvVXNlcnMveWFha292L0xQL0NvdXJzZXdhcmUvU3BhcmsvSW50cm8tM2RheS8yMDE3MDYxNS9MYWJzL0NlbnRPUy9zcGFyay1sYWJzL3NvbHV0aW9ucy9TZXNzaW9uMDcvTGFiMDcuMS90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUzdCtjj4AueERg3yJ3z3unLBl4fU=
+external apis:
+0 items
+source infos:
+1 items
+/Users/yaakov/LP/Courseware/Spark/Intro-3day/20170615/Labs/CentOS/spark-labs/solutions/Session07/Lab07.1/src/main/scala/com/mycompany/ProcessFiles.scala -> 
+AAAAAAAAAAA=
+compilations:
+1 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABXLS/Wv51cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAgi9Vc2Vycy95YWFrb3YvTFAvQ291cnNld2FyZS9TcGFyay9JbnRyby0zZGF5LzIwMTcwNjE1L0xhYnMvQ2VudE9TL3NwYXJrLWxhYnMvc29sdXRpb25zL1Nlc3Npb24wNy9MYWIwNy4xL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
